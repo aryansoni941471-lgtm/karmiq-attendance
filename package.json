@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Karmiq Web Application",
   "scripts": {
-    "start": "node server.js"
+    "start": "node scripts/server.js"
   },
   "keywords": [],
   "author": "",

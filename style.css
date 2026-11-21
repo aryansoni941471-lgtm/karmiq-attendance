@@ -4810,6 +4810,163 @@ img, svg {
     width: 100%;
   }
 
+  /* --- FAST QR CHECK-IN BANNER (OVERVIEW) --- */
+  .dash-quick-banner {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+  .banner-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .banner-right {
+    width: 100%;
+  }
+  .banner-right .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  /* --- QR SCANNER TERMINAL PANE (MOBILE) --- */
+  #pane-scanner .pane-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+  }
+  #pane-scanner .pane-title {
+    font-size: 1.35rem;
+  }
+  #pane-scanner .pane-subtitle {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  #pane-scanner .terminal-time-badge {
+    align-self: flex-start;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.65rem;
+  }
+
+  .scanner-terminal-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .scanner-camera-card {
+    padding: 1rem 0.85rem;
+    border-radius: var(--radius-lg);
+    gap: 0.85rem;
+  }
+
+  .camera-terminal-top {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .terminal-status-light {
+    font-size: 0.78rem;
+  }
+  .shop-terminal-tag {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .camera-viewfinder-box {
+    height: 270px;
+    border-radius: var(--radius-md);
+  }
+
+  .camera-target-brackets {
+    width: 150px;
+    height: 150px;
+  }
+
+  .camera-prompt-text {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.65rem;
+    bottom: 0.85rem;
+  }
+
+  /* Scanner Controls Bar on Mobile */
+  .scanner-controls-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .scanner-controls-bar #btnToggleCamera {
+    flex: 1 1 100%;
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+  }
+
+  .scanner-controls-bar #btnSwitchCamera,
+  .scanner-controls-bar button[onclick*="qrFileInput"] {
+    flex: 1 1 calc(50% - 0.25rem);
+    justify-content: center;
+    font-size: 0.75rem;
+    padding: 0.6rem 0.4rem;
+    text-align: center;
+    border-radius: var(--radius-md);
+  }
+
+  /* Manual Test / Simulation Controls on Mobile */
+  .simulation-controls {
+    padding: 0.85rem;
+    border-radius: var(--radius-md);
+    gap: 0.65rem;
+  }
+
+  .sim-header strong {
+    font-size: 0.82rem;
+  }
+  .sim-header span {
+    font-size: 0.72rem;
+  }
+
+  .sim-picker-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .sim-picker-row select {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .sim-picker-row .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  /* Today's Check-in Feed on Mobile */
+  .scanner-feed-card {
+    padding: 1rem 0.85rem;
+    border-radius: var(--radius-lg);
+  }
+  .scanner-feed-card .panel-header h3 {
+    font-size: 0.95rem;
+  }
+  .scanner-logs-list {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
   /* Bottom Navigation safe area padding */
   .mobile-bottom-nav {
     padding-bottom: env(safe-area-inset-bottom, 0px);

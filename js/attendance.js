@@ -118,13 +118,11 @@ function renderAttendancePane() {
       `;
     } else if (isHalfDay) {
       actionBtn = `
-        <button class="btn btn-secondary btn-xs" onclick="manualMarkPresent('${emp.id}', '${viewDate}')">🟢 Full Present</button>
-        <button class="btn btn-outline btn-xs" onclick="manualMarkAbsent('${emp.id}', '${viewDate}')" style="color:#dc2626; border-color:#fca5a5;">🔴 Absent</button>
+        <button class="btn btn-outline btn-xs" onclick="manualMarkAbsent('${emp.id}', '${viewDate}')" style="color:#dc2626; border-color:#fca5a5;">🔴 Mark Absent</button>
       `;
     } else {
       // Absent employee
       actionBtn = `
-        <button class="btn btn-primary btn-xs" onclick="manualMarkPresent('${emp.id}', '${viewDate}')" style="background:#16a34a; border-color:#15803d; font-weight:700;">🟢 Mark Present (Aaya)</button>
         <button class="btn btn-warning-soft btn-xs" onclick="openBreakModal('${emp.id}', 'halfday')">🟡 Half Day</button>
       `;
     }

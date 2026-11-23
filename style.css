@@ -4973,6 +4973,442 @@ img, svg {
     height: calc(62px + env(safe-area-inset-bottom, 0px));
   }
 
+  /* ============================================================
+     DASHBOARD — dual grid & panels (single column on mobile)
+  ============================================================ */
+  .dash-dual-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .dash-panel {
+    padding: 1rem 0.9rem;
+  }
+
+  .staff-compact-item {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .staff-hours-tracker {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .staff-mini-bar {
+    width: 60px;
+  }
+
+  /* ============================================================
+     ATTENDANCE PANE — summary strip 2×2 grid
+  ============================================================ */
+  .att-summary-strip {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.65rem;
+    padding: 0.85rem !important;
+    border-radius: 12px;
+  }
+
+  .att-summary-strip > * {
+    min-width: 0;
+  }
+
+  /* Date selector bar — stack vertically */
+  .att-date-selector-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.6rem !important;
+    padding: 0.75rem !important;
+  }
+
+  .att-date-selector-bar > * {
+    width: 100% !important;
+  }
+
+  /* Pane header actions on attendance — wrap nicely */
+  #pane-attendance .pane-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  #pane-attendance .header-actions-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  #pane-attendance .header-actions-group .btn {
+    flex: 1 1 calc(50% - 0.2rem);
+    justify-content: center;
+    font-size: 0.78rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  /* att-detail-card action buttons */
+  .att-actions-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .att-actions-block .btn {
+    flex: 1 1 calc(50% - 0.2rem);
+    justify-content: center;
+    font-size: 0.75rem;
+    padding: 0.45rem 0.5rem;
+  }
+
+  /* timing columns inside att-timing-block: scroll-friendly */
+  .att-timing-block {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem !important;
+    padding: 0.6rem 0.75rem !important;
+  }
+
+  .timing-col {
+    min-width: 72px;
+  }
+
+  /* ============================================================
+     EMPLOYEES PANE — table & controls
+  ============================================================ */
+  .table-controls-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .search-box {
+    width: 100% !important;
+  }
+
+  .search-box input {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .filter-group {
+    width: 100% !important;
+  }
+
+  .filter-group select {
+    width: 100% !important;
+    font-size: 0.82rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Manager banner on mobile */
+  .manager-staff-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .manager-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .manager-banner-actions .btn {
+    flex: 1 1 calc(50% - 0.2rem);
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+
+  /* Dash table: horizontal scroll, compact cells */
+  .dash-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+  }
+
+  .dash-table {
+    min-width: 560px;
+  }
+
+  .dash-table th,
+  .dash-table td {
+    padding: 0.6rem 0.65rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  /* ============================================================
+     SALARY PANE
+  ============================================================ */
+  .salary-totals-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem;
+  }
+
+  .sal-summary-card {
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+  }
+
+  .sal-card-title {
+    font-size: 0.68rem;
+  }
+
+  .sal-card-val {
+    font-size: 1.5rem;
+  }
+
+  #pane-salary .pane-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  #pane-salary .pane-header .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ============================================================
+     REPORTS PANE
+  ============================================================ */
+  #pane-reports .pane-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .report-filter-wrap {
+    width: 100%;
+  }
+
+  .report-filter-wrap .btn {
+    flex: 1 1 calc(50% - 0.25rem);
+    justify-content: center;
+    font-size: 0.78rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .report-kpi-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.65rem;
+  }
+
+  .report-kpi-card {
+    padding: 0.75rem 0.65rem;
+    border-radius: 10px;
+  }
+
+  .kpi-lbl {
+    font-size: 0.6rem;
+  }
+
+  .kpi-val {
+    font-size: 1.3rem;
+  }
+
+  /* Report month bar */
+  .report-month-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem;
+    padding: 0.75rem !important;
+  }
+
+  .report-month-bar select,
+  .report-month-bar input {
+    width: 100% !important;
+    font-size: 0.85rem;
+  }
+
+  /* Report table inside monthly reports */
+  .report-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+  }
+
+  .report-table {
+    min-width: 500px;
+  }
+
+  .report-table th,
+  .report-table td {
+    padding: 0.6rem 0.65rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  /* ============================================================
+     AAJ KA HISAAB PANE
+  ============================================================ */
+  .hisaab-big-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .h-stat-box {
+    padding: 0.85rem 0.75rem;
+    border-radius: 10px;
+  }
+
+  .h-stat-title {
+    font-size: 0.68rem;
+    line-height: 1.25;
+    margin-bottom: 0.3rem;
+  }
+
+  .h-stat-num {
+    font-size: 1.5rem;
+  }
+
+  .hisaab-master-card {
+    padding: 1rem 0.9rem;
+  }
+
+  .hisaab-metric-tiles {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.65rem;
+  }
+
+  /* ============================================================
+     SETTINGS PANE
+  ============================================================ */
+  .settings-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem;
+  }
+
+  .settings-card {
+    padding: 1rem 0.9rem;
+  }
+
+  .settings-sec-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.85rem;
+  }
+
+  /* ============================================================
+     ALL PANE HEADERS — compact on mobile
+  ============================================================ */
+  .pane-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .pane-title {
+    font-size: 1.3rem !important;
+    line-height: 1.25;
+  }
+
+  .pane-subtitle {
+    font-size: 0.78rem !important;
+    line-height: 1.35;
+  }
+
+  /* ============================================================
+     MODALS — bottom sheet style on mobile
+  ============================================================ */
+  .modal-overlay {
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+
+  .modal-card {
+    border-radius: 20px 20px 0 0 !important;
+    padding: 1.25rem 1rem 1.5rem !important;
+    max-height: 90vh !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Pull handle indicator */
+  .modal-card::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #cbd5e1;
+    border-radius: 2px;
+    margin: 0 auto 1rem;
+  }
+
+  .modal-header {
+    padding: 0 0 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .modal-header h3,
+  .modal-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem;
+  }
+
+  .modal-footer-actions,
+  .modal-footer,
+  .modal-actions {
+    flex-direction: column-reverse !important;
+    gap: 0.5rem !important;
+    width: 100%;
+  }
+
+  .modal-footer-actions .btn,
+  .modal-footer .btn,
+  .modal-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* ============================================================
+     TOAST NOTIFICATIONS — above bottom nav
+  ============================================================ */
+  .toast-container {
+    bottom: calc(70px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 0.85rem !important;
+    right: 0.85rem !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  .toast {
+    font-size: 0.82rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  /* ============================================================
+     GENERAL BUTTON SIZING ON MOBILE
+  ============================================================ */
+  .btn {
+    font-size: 0.82rem;
+  }
+
+  .btn-xs {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.5rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
